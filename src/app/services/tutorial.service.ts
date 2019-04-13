@@ -6,27 +6,13 @@ import {Observable, Subject} from 'rxjs';
 
 @Injectable()
 export class TutorialService {
-  private coursesData:Courses;
-  private courseSubject = new Subject<Courses>();
+  public coursesData:Courses;
+  public courseSubject = new Subject<Courses>();
 
   constructor(private http: HttpClient) { 
-    this.getCompleteCourseData();
   }
 
-  private getCompleteCourseData(){
-    this.http.get<Courses>("https://codingkrishna.github.io/api/courses.json")
-    .subscribe(data => {
-      console.log('TutorialService-->', data);
-      this.coursesData = data;
-      this.courseSubject.next(data);
-    })
-  }
-
-  /*public getCourses(){
-    return this.coursesData.courses.map(course => course.name);
-  }*/
-
-public getCourses() {
+  public getCourses() {
     return this.courseSubject.asObservable();
   }
 

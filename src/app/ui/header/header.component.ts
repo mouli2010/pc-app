@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TutorialService } from '../../services/tutorial.service';
-import { Courses } from '../../services/courses';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,7 +10,7 @@ import { Courses } from '../../services/courses';
 export class HeaderComponent implements OnInit {
   courseList = [];
   courseGropList = [];
-  constructor(private tutorialSer: TutorialService) { }
+  constructor(private tutorialSer: TutorialService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.tutorialSer.getCourses().subscribe(data=> {

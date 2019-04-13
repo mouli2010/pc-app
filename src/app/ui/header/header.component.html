@@ -100,7 +100,7 @@
       <div class="row">
         <div class="col-md-3" *ngFor="let courseGrop of courseGropList">
           <p><strong class="sub-menu-heading">{{courseGrop.key}}</strong></p>
-            <p> <a *ngFor="let course of courseGrop.value" routerLink="/tutorial/{{course.courseId}}">
+            <p> <a *ngFor="let course of courseGrop.value" routerLink="/tutorial/{{course.courseId}}/video/1">
               {{course.name}}
             </a></p>
         </div>
