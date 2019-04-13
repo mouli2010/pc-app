@@ -1,12 +1,123 @@
+<!-- Top Banner -->
+<nav class="navbar-header navbar-expand-sm bg-dark navbar-dark  ">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav " style="margin-left: 50px">
+        <li class="nav-item ">
+          <a class="nav-link" href="#" style="color: white"
+            ><i class="fas fa-mobile-alt"></i> +91-8123870076</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: white"
+            ><i class="far fa-envelope"></i> contactus@pioneercoders.com</a
+          >
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a
+            class="nav-link"
+            href="#"
+            style="color: white; margin-left: 470px"
+            ><i class="fas fa-map-marker-alt"></i> BTM layout 1stage, Near
+            Gangothri Circle</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!-- Top Banner -->
 
+<!-- Header -->
+<nav class="navbar  navbar-expand-xl  bg-white navbar-fixed-custom  ">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#"> </a>
+    <!-- Links -->
+    <ul class="navbar-nav " style="margin-left: 20px ">
+      <li class="nav-item">
+        <img src="../../../assets/pc-logo.png" alt="logo" style="width:90px;" />
+      </li>
+      <li class="nav-item  ">
+        <a
+          class="nav-link"
+          href="#"
+          style="color:#5f5f5f; font: inherit ; margin-top: 8px"
+          ><h2 class="title">PioneerCoders</h2></a
+        >
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right nav-move-right ">
+      <li class="nav-item  ">
+        <a
+          class=" active nav-link text-danger "
+          href="#"
+          style="margin-left: -60px"
+          >Home</a
+        >
+      </li>
+      &emsp;
+      <div class="vertical-line "></div>
+      &emsp;
+      <li class="nav-item ">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          data-toggle="modal"
+          data-target="#modalsignUpForm"
+          >Video Tutorial</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+
+  <!--Header -->
+
+  <!-- Course  Menu -->
+  
+  <!-- MENU DETAILS -->
+  <div
+  class="modal fade"
+  id="modalsignUpForm"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col-md-3" *ngFor="let courseGrop of courseGropList">
+          <p><strong class="sub-menu-heading">{{courseGrop.key}}</strong></p>
+            <p> <a *ngFor="let course of courseGrop.value" routerLink="/tutorial/{{course.courseId}}">
+              {{course.name}}
+            </a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Course Menu -->
+<!--
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <!-- Brand -->
+   
     <a class="navbar-brand" href="#">Logo</a>
   
-    <!-- Links -->
+   
     <ul class="navbar-nav">
   
-      <!-- Dropdown -->
+   
       <li class="nav-item dropdown" *ngFor="let courseGrop of courseGropList">
         <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
             {{courseGrop.key}}
@@ -18,3 +129,4 @@
       
     </ul>
   </nav>
+-->

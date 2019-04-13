@@ -1,4 +1,4 @@
-<div>{{courseDetails.courseId}} </div>
+<!-- <div>{{courseDetails.courseId}} </div>
 <div>{{courseDetails.name}} </div>
 <div>{{courseDetails.description}} </div>
 <div *ngFor="let topic of courseDetails.topics">
@@ -6,4 +6,18 @@
 </div>
 <div>
         <router-outlet></router-outlet>
+</div>
+-->
+
+<div class="container row">
+    <div class="menu">
+        <ul>
+        <li *ngFor="let topic of courseDetails.topics">
+            <a routerLink="video/{{topic.videoId}}">{{topic.name}}</a> 
+        </li>
+        </ul>
+    </div>
+    <div style="position: relative; left:15%;top: 5%;">
+            <router-outlet></router-outlet>
+    </div>
 </div>
