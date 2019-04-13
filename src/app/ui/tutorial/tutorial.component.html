@@ -1,4 +1,9 @@
 <div>{{courseDetails.courseId}} </div>
 <div>{{courseDetails.name}} </div>
 <div>{{courseDetails.description}} </div>
-<div *ngFor="let topic of courseDetails.topics">{{topic.name}} </div>
+<div *ngFor="let topic of courseDetails.topics">
+    <div ><a routerLink="video/{{topic.videoId}}">{{topic.name}}</a> </div>
+</div>
+<div>
+        <router-outlet></router-outlet>
+</div>
