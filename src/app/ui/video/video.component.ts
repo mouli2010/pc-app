@@ -21,6 +21,9 @@ export class VideoComponent implements OnInit {
     this.route.parent.params.subscribe(params => {
       console.log('[Parent params]-->', params);
       this.tutorialId = +params["id"];
+      let vId = this.tutorialServ.getCourseDetails(this.tutorialId).topics[0].videoId
+      this.videoId = "http://www.youtube.com/embed/"+ vId;
+      console.log('[Parent videoId]-->', this.videoId);
     });
     this.route.params.subscribe( params => {
       if (params.videoId == 1 ){

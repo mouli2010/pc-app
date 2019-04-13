@@ -16,10 +16,10 @@ import {SafePipe} from './pipes/safepipe';
 import { TutorialResolve } from './tutorial.resolve';
 
 const routes: Routes = [
-  {path:'', redirectTo: '/tutorial/1/video/ppPZziYJMhc', pathMatch: 'full'},
+  {path:'', redirectTo: '/tutorial/1/video/1', pathMatch: 'full'},
   { path: 'tutorial/:id', component: TutorialComponent ,
     children: [
-      { path: '', redirectTo: '/tutorial/1/video/1', pathMatch: 'full' },
+      { path: '', redirectTo: './video/1', pathMatch: 'full' },
     {
     path:  'video/:videoId',
     component:  VideoComponent
